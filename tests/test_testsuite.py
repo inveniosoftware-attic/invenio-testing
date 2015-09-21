@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Invenio.
-# Copyright (C) 2014 CERN.
+# Copyright (C) 2014, 2015 CERN.
 #
 # Invenio is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License as
@@ -19,11 +19,13 @@
 
 
 from StringIO import StringIO
-from invenio.testsuite import InvenioTestCase, make_test_suite, \
-    run_test_suite, make_file_fixture, stringio_to_base64, make_pdf_fixture
+
+from invenio_testing import InvenioTestCase, make_file_fixture, \
+    make_pdf_fixture, stringio_to_base64
 
 
 class TestsuiteTest(InvenioTestCase):
+
     def test_make_file_fixture(self):
         res = make_file_fixture(
             "test.txt",
@@ -39,9 +41,3 @@ class TestsuiteTest(InvenioTestCase):
         assert isinstance(res, tuple)
         assert res[1] == "test.pdf"
         assert hasattr(res[0], 'read')
-
-
-TEST_SUITE = make_test_suite(InvenioTestCase)
-
-if __name__ == "__main__":
-    run_test_suite(TEST_SUITE)

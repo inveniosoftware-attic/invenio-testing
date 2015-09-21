@@ -36,14 +36,12 @@ history = open('CHANGES.rst').read()
 requirements = [
     'Flask>=0.10.1',
     'six>=1.7.2',
-    'Invenio>=2.0.3',
-]
-
-test_requirements = [
-    'pytest>=2.7.0',
-    'pytest-cov>=1.8.0',
+    'invenio-base>=0.2.1',
+    'invenio-ext>=0.1.0',
+    'pytest>=2.8.0',
+    'pytest-cov>=2.1.0',
     'pytest-pep8>=1.0.6',
-    'coverage>=3.7.1',
+    'coverage>=4.0.0',
 ]
 
 
@@ -74,9 +72,6 @@ class PyTest(TestCommand):
         """Run tests."""
         # import here, cause outside the eggs aren't loaded
         import pytest
-        import _pytest.config
-        pm = _pytest.config.get_plugin_manager()
-        pm.consider_setuptools_entrypoints()
         errno = pytest.main(self.pytest_args)
         sys.exit(errno)
 
@@ -91,7 +86,7 @@ setup(
     version=version,
     description=__doc__,
     long_description=readme + '\n\n' + history,
-    keywords='invenio TODO',
+    keywords='invenio testing',
     license='GPLv2',
     author='CERN',
     author_email='info@invenio-software.org',
@@ -108,7 +103,6 @@ setup(
             'Sphinx>=1.3',
             'sphinx_rtd_theme>=0.1.7'
         ],
-        'tests': test_requirements
     },
     classifiers=[
         'Environment :: Web Environment',
@@ -126,6 +120,5 @@ setup(
         # 'Programming Language :: Python :: 3.4',
         'Development Status :: 1 - Planning',
     ],
-    tests_require=test_requirements,
     cmdclass={'test': PyTest},
 )
