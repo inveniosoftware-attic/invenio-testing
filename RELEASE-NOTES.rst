@@ -2,7 +2,7 @@
  Invenio-Testing v0.1.0
 ========================
 
-Invenio-Testing v0.1.0 was released on TBD, 2015.
+Invenio-Testing v0.1.0 was released on September 22, 2015.
 
 About
 -----
