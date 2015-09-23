@@ -24,6 +24,10 @@
 Changes
 =======
 
+Version 0.1.1 (released 2015-09-23)
+
+- Adds missing Flask-Testing>=0.4.1 dependency.
+
 Version 0.1.0 (released 2015-09-22)
 
 - Initial public release.

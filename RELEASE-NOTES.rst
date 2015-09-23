@@ -1,8 +1,8 @@
 ========================
- Invenio-Testing v0.1.0
+ Invenio-Testing v0.1.1
 ========================
 
-Invenio-Testing v0.1.0 was released on September 22, 2015.
+Invenio-Testing v0.1.1 was released on September 23, 2015.
 
 About
 -----
@@ -11,20 +11,20 @@ The Invenio-Testing provides unit testing utilities for Invenio.
 
 *This is an experimental developer preview release.*
 
-What's new
-----------
+Bug fixes
+---------
 
-- Initial public release.
+- Adds missing Flask-Testing>=0.4.1 dependency.
 
 Installation
 ------------
 
-   $ pip install invenio-testing==0.1.0
+   $ pip install invenio-testing==0.1.1
 
 Documentation
 -------------
 
-   http://invenio-testing.readthedocs.org/en/v0.1.0
+   http://invenio-testing.readthedocs.org/en/v0.1.1
 
 Happy hacking and thanks for flying Invenio-Testing.
 
